@@ -56,9 +56,16 @@
         });
 
         $('#submit_form').bind('submit', function () {
+
+            if ($('#MentorSelect').val() == "") {
+                alert('멘토를 선택해 주세요.');
+                return false;
+            }
+
             if (!confirm('기업회원 승인을 완료하시겠습니까?')) {
                 return false;
             }
+
         });
     });
 
@@ -186,7 +193,7 @@
                         @{
                             if (ViewBag.SelectMentorList != null)
                             {
-                                @Html.DropDownListFor(model => model.MentorLoginId, ViewBag.SelectMentorList as SelectList, new { @class = "w250" });
+                                @Html.DropDownListFor(model => model.MentorLoginId, ViewBag.SelectMentorList as SelectList, new { @class = "w250", @id= "MentorSelect" });
                             }
                         }
                     </td>

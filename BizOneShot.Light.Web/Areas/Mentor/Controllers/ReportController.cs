@@ -76,8 +76,9 @@ namespace BizOneShot.Light.Web.Areas.Mentor.Controllers
             ViewBag.SelectStatusList = ReportHelper.MakeReportStatusList();
 
             //기초역량 보고서 조회
-            int pagingSize = int.Parse(ConfigurationManager.AppSettings["PagingSize"]);
-            int pageSize = int.Parse(ConfigurationManager.AppSettings["PagingSize"]);
+            //int pagingSize = int.Parse(ConfigurationManager.AppSettings["PagingSize"]);
+            int pagingSize = 100;
+            //int pageSize = int.Parse(ConfigurationManager.AppSettings["PagingSize"]);
 
             // listScCompInfo -> RegistrationNo를 추출
             var compsRegistrationNo = listScCompInfo.Select(cmp => cmp.RegistrationNo).ToList();
