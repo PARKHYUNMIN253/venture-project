@@ -1,0 +1,40 @@
+﻿<div id="sub_leftwrap">
+    <div class="sub_gnbwrap">
+        <ul>
+
+            @if (ViewBag.LeftMenu == Global.BizMng)//사업관리기관 관리
+            {
+                <li class="title left_text">사업기관 관리</li>
+                <li><a href="@Url.Action("BizManager","BizManager",new { area= "SysManager" })" class="gnb gnb_bizMng">사업기관 관리</a></li>
+                <li><a href="@Url.Action("RegBizManager","BizManager",new { area= "SysManager" })" class="gnb gnb_regBizMng">사업기관 등록</a></li>
+            }
+            else if (ViewBag.LeftMenu == Global.Cs)//고객센터
+            {
+                <li class="title left_text">고객센터</li>
+                <li><a href="@Url.Action("Notice","Cs",new { area= "" })" class="gnb gnb_notice">공지사항</a></li>
+                <li><a href="@Url.Action("Faq","Cs",new { area= "" })" class="gnb gnb_faq">FAQ</a></li>
+                <li><a href="@Url.Action("Manual","Cs",new { area= "" })" class="gnb gnb_menual">매뉴얼 및 서식</a></li>
+            }
+            else if (ViewBag.LeftMenu == Global.ExpertMng)//전문가회원 관리
+            {
+                <li class="title left_text">전문가회원 관리</li>
+                <li><a href="@Url.Action("ExpertManager","ExpertManager",new { area= "SysManager" })" class="gnb gnb_ExpertMng">전문가회원 조회</a></li>
+                <li><a href="@Url.Action("RegExpertManager","ExpertManager",new { area= "SysManager" })" class="gnb gnb_RegExpertMng">전문가회원 등록</a></li>
+            }
+            else if (ViewBag.LeftMenu == Global.Report)//보고서관리
+            {
+                <li class="title left_text">보고서</li>
+                <li><a href="javascript:alert('차후 오픈예정입니다.');" class="gnb gnb_financeReport">재무관리 보고서</a></li>
+                <li><a href="@Url.Action("BasicSurveyReport","Report",new { area= "SysManager" })" class="gnb gnb_basicReport">기초경영역량 보고서</a></li>
+                <li><a href="@Url.Action("CompanyAverage","Report",new { area= "SysManager" })" class="gnb gnb_companyaverage">중소기업평균</a></li>
+                <li><a href="@Url.Action("MarketState","Report",new { area= "SysManager" })" class="gnb gnb_marketstate">상품화역량 시장현황</a></li>
+            }
+            else
+            {
+
+            }
+
+
+        </ul>
+    </div><!--sub_gnbwrap//-->
+</div><!--sub_leftwrap//-->

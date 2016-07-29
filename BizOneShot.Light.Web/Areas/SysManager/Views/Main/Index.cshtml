@@ -1,0 +1,11 @@
+﻿@{
+    Layout = "~/Views/Shared/_JoinLayout.cshtml";
+}
+
+<div class="company_main scp">
+    <div class="container">
+        <div id="main_cont4wrap">
+            <a href="javascript:alert('차후 오픈예정입니다.')" class="m8"><img src="~/images/scp_admin_01.png"></a><a href="@Url.Action("BasicSurveyReport","Report",new { area= "SysManager" })" class="m8"><img src="~/images/scp_admin_02.png"></a><a href="@Url.Action("Notice","Cs",new { area= "" })" class="m8"><img src="~/images/scp_admin_03.png"></a><a href="@Url.Action("BizManager","BizManager",new { area= "SysManager" })"><img src="~/images/scp_admin_04.png"></a>
+        </div><!--main_cont2wrap//-->
+    </div>
+</div>
